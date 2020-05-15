@@ -24,6 +24,7 @@ export const fetchSmurf = () => (dispatch) => {
 		});
 };
 
+// POOOOOSSSSST REQUESSSST!!!!!
 export const addSmurf = (smurf) => (dispatch) => {
 	dispatch({ type: ADDSMURF, payload: 'Adding to the village' });
 	console.log('addS', smurf);
