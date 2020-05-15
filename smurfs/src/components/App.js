@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
-// imports
 import axios from 'axios';
+
+// imports 
 import SmurfForm from './SmurfForm';
 import SmurfList from './SmurfList';
 import { SmurfContext } from './SmurfContext';
 
-// import style
+// import styles
 import styled from 'styled-components';
 
 const Village = styled.div`
@@ -18,8 +18,16 @@ const Village = styled.div`
 const App = () => {
 	const [ smurfs, setSmurfs ] = useState([]);
 	const addSmurf = (newSmurf) => {
-		setSmurfs([ ...SmurfList, newSmurf ]);
+		setSmurfs([ ...smurfs, newSmurf ]);
 	};
+
+	// stretch goal 
+	//  const Remove = smurf => {
+	//   axios.delete(`http://localhost:3333/smurfs/${smurf}`).then(res => {
+	//     setSmurfs(res.data);
+	//   });
+	// };
+
 	useEffect(() => {
 		axios.get('http://localhost:3333/smurfs').then((res) => {
 			console.log(res.data);

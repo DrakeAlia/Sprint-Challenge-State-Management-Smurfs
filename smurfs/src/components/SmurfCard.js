@@ -1,5 +1,11 @@
 import React from 'react';
 
+// strech goal
+// const DeleteSmurf = () => {
+//  alert('Smurf is gone...')
+// }
+
+// passing props
 const SmurfCard = (props) => {
 	return (
 		<div>

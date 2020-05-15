@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { SmurfContext } from './SmurfContext';
 
+// user submits form 
 const SmurfForm = () => {
 	const { addSmurf } = useContext(SmurfContext);
 
@@ -23,8 +24,9 @@ const SmurfForm = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		addSmurf(newSmurf);
-	};
-
+    };
+    
+// info displayed 
 	return (
 		<div>
 			<form>
