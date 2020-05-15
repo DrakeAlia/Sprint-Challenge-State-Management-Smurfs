@@ -17,7 +17,7 @@ const App= ({fetchSmurf})=> {
 
     return (
       <div className="App">
-        <h1>SMURFS LAND!!!!</h1>
+        <h1>SMURFS LAND V2!!!!</h1>
         <div>Welcome to Drake's Second Attempted!!</div>
         <div>Become a Smurf Today and Have fun!</div>
           <SmurfCard />
