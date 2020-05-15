@@ -3,11 +3,11 @@ import './App.css';
 
 // imports
 import axios from 'axios';
-import SmurfForm from './components/SmurfForm';
-import SmurfList from './components/SmurfList';
-import { SmurfContext } from './contexts/SmurfContext';
+import SmurfForm from './SmurfForm';
+import SmurfList from './SmurfList';
+import { SmurfContext } from './SmurfContext';
 
-// import styles
+// import style
 import styled from 'styled-components';
 
 const Village = styled.div`

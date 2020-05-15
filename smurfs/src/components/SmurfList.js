@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { SmurfContext } from './contexts/SmurfContext';
-import SmurfCard from './components/SmurfCard';
+import { SmurfContext } from './SmurfContext';
+import SmurfCard from './SmurfCard';
 
 const SmurfList = () => {
 	const { smurfs, deleteSmurf } = useContext(SmurfContext);
