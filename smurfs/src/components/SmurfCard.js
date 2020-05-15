@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 
+// info being displayed on card/user
 const SmurfCard = (props) => {
 	return (
 		<div className="smurf-container">

@@ -1,4 +1,5 @@
 import axios from 'axios';
+// imports for cases
 export const FETCHSMURF = 'FETCHSMURF';
 export const FETCHPASS = 'FETCHPASS';
 export const FETCHMISS = 'FETCHMISS';
@@ -6,6 +7,7 @@ export const ADDSMURF = 'ADDSMURF';
 export const ADDPASS = 'ADDPASS';
 export const ADDMISS = 'ADDMISSS';
 
+// state
 export const fetchSmurf = () => (dispatch) => {
 	dispatch({ type: FETCHSMURF, payload: 'Building the village' });
 	axios
