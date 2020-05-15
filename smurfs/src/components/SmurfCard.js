@@ -1,19 +1,27 @@
 import React from 'react';
+import './App.css';
+import { connect } from 'react-redux';
 
-// strech goal
-// const DeleteSmurf = () => {
-//  alert('Smurf is gone...')
-// }
-
-// passing props
 const SmurfCard = (props) => {
 	return (
-		<div>
-			<h1>{props.smurf.name}</h1>
-			<h2>{props.smurf.age}</h2>
-			<h3>{props.smurf.height}</h3>
+		<div className="smurf-container">
+			{props.smurfs.map((item) => {
+				return (
+					<div key={item.id}>
+						<p>Name: {`${item.name} Smurf`}</p>
+						<p>Age: {item.age}</p>
+						<p>Height: {item.height}</p>
+					</div>
+				);
+			})}
 		</div>
 	);
 };
 
-export default SmurfCard;
+const mapStateToProps = (state) => {
+	return {
+		smurfs: state.smurfs
+	};
+};
+
+export default connect(mapStateToProps, {})(SmurfCard);
