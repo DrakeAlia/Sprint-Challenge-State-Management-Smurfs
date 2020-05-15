@@ -22,19 +22,34 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What problem does the context API help solve?
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
-- [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+- [X] What problem does the context API help solve?
+
+* React context is a way for the child component to access through the value that is in a parent component.
+The context solves the problem of prop drilling in which allows you to share props or state with either child out parent.
+
+- [X] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+* Reducers accepts the previous state and the action and returns the next state of your app. Actions are processed by a reducer that accepts the previous state. Store is a single immutable state tree where all sate changes are handled by dispatching actions. Single source of truth is a global state of your app that is stored in an object see within a single store, easier to debug or inspect  
+
+- [X] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+* Application state is global and component state is local  You would use app state when you need the component to access the database so long as they have hooks into it. While component state can only be updated with that component and be passed down to its children via props.
+
+- [X] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+* Redux-thunk is a middleware that lets you call action creators that return a function instead of an action object
+
+- [X] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+* Redux because when you are using reducers it takes the previous state and an action and returns the next state. You are modifying the Redux state by dispatching an action with a certain type. Afterwards, each reducer checks if it accepts the type, making it easy to debug state updates 
 
 ## Project Set Up
 
 Follow these steps to set up your project:
 
-- [ ] `fork & clone` this repository.
-- [ ] `cd` into the forked copy of this repository.
-- [ ] **RUN** `npm install` to retrieve all `server-side` the dependencies.
+- [X] `fork & clone` this repository.
+- [X] `cd` into the forked copy of this repository.
+- [X] **RUN** `npm install` to retrieve all `server-side` the dependencies.
 - [ ] **RUN** `npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
 - [ ] After your API is up and running, you can open chrome and type in `http://localhost:3333/smurfs`. You should see an array with one smurf in it returned to you. This is an array that your **API** will be using to store our Smurf Data.
 - [ ] **LOOK** at your `smurfs` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
